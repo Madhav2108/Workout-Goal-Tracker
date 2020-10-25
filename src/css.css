@@ -183,3 +183,62 @@ h6{
   pointer-events: none;
   transition: opacity 350ms ease, transform 350ms ease;
 }
+.tooltip:after{
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    z-index: -1;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom: 10px solid #1a3489;
+    transition: border-bottom 200ms 100ms ease;
+  }
+  .tooltip .bx{
+    margin: 0;
+    width: auto;
+    font-size: 20px;
+    margin-right: 3px;
+    transform: translateY(-1px);
+    color: #ffeba7;
+  }
+  .tooltip.goal-1{
+    top: 57%;
+    left: 34.5%;
+  }
+  .tooltip.goal-2{
+    top: 58.5%;
+    left: 38.5%;
+  }
+  .tooltip.goal-3{
+    top: 49.8%;
+    left: 63.7%;
+  }
+  .tooltip.goal-4{
+    top: 19%;
+    left: 84%;
+  }
+  .tooltip.goal-5{
+    top: 30.3%;
+    left: 59%;
+  }
+  .tooltip.goal-6{
+    top: 17%;
+    left: 24.9%;
+  }
+  #goal-1:checked ~ .section-col-1 .tooltip.goal-1,
+  #goal-2:checked ~ .section-col-1 .tooltip.goal-2,
+  #goal-3:checked ~ .section-col-1 .tooltip.goal-3,
+  #goal-4:checked ~ .section-col-1 .tooltip.goal-4,
+  #goal-5:checked ~ .section-col-1 .tooltip.goal-5,
+  #goal-6:checked ~ .section-col-1 .tooltip.goal-6 {
+    transform: translateX(-50%) rotate(0); 
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 350ms 1300ms ease, transform 350ms 1300ms ease;
+  }
+  
+  
