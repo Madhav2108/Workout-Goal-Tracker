@@ -241,4 +241,46 @@ h6{
     transition: opacity 350ms 1300ms ease, transform 350ms 1300ms ease;
   }
   
-  
+  @media (max-width: 680px) {
+    .goal-btn:checked + label,
+    .goal-btn:not(:checked) + label{
+      width: 100%;
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      text-align: center;
+    }
+    .section-svg-wrap svg{
+      stroke-width: 10px;
+    }
+  }
+  @media (max-width: 450px) {
+    .goal-btn:checked + label,
+    .goal-btn:not(:checked) + label{
+      -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
+    }
+    .tooltip.goal-1,
+    .tooltip.goal-2,
+    .tooltip.goal-3,
+    .tooltip.goal-4,
+    .tooltip.goal-5,
+    .tooltip.goal-6{
+      top: auto;
+      left: 50%;
+      bottom: -45px;
+    }
+    .tooltip:after{
+      display: none;
+    }
+    .tooltip{
+      transform: translate(-50%, 10px) rotate(0); 
+    }
+    #goal-1:checked ~ .section-col-1 .tooltip.goal-1,
+    #goal-2:checked ~ .section-col-1 .tooltip.goal-2,
+    #goal-3:checked ~ .section-col-1 .tooltip.goal-3,
+    #goal-4:checked ~ .section-col-1 .tooltip.goal-4,
+    #goal-5:checked ~ .section-col-1 .tooltip.goal-5,
+    #goal-6:checked ~ .section-col-1 .tooltip.goal-6 {
+      transform: translate(-50%, 0) rotate(0); 
+    }
+  }
