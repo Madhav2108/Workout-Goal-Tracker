@@ -116,3 +116,70 @@ h6{
   position: absolute;
   visibility: hidden;
 }
+.goal-btn:checked + label,
+.goal-btn:not(:checked) + label{
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  margin: 5px 6px;
+  padding: 12px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: #101e54;
+  color: #ffeba7;
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+.goal-btn:checked + label{
+  background-color: #ffeba7;
+  color: #101e54;
+}
+#goal-1:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 3200;
+  stroke-dasharray: 3715;
+}
+#goal-2:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 2600;
+  stroke-dasharray: 3715;
+}
+#goal-3:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 2000;
+  stroke-dasharray: 3715;
+}
+#goal-4:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 1400;
+  stroke-dasharray: 3715;
+}
+#goal-5:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 700;
+  stroke-dasharray: 3715;
+}
+#goal-6:checked ~ .section-col-1 .section-svg-wrap svg.svg-path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 3715;
+}
+.tooltip{
+  position: absolute;
+  display: block;
+  z-index: 100;
+  min-width: 160px;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #1a3489;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 12px 35px 0 rgba(16, 31, 85, 0.35);
+  transform: translateX(-50%) rotate(-15deg); 
+  transform-origin: center top;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms ease, transform 350ms ease;
+}
